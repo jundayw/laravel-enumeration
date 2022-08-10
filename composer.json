@@ -1,0 +1,30 @@
+{
+    "name": "jundayw/laravel-enumeration",
+    "description": "The Laravel Enumeration.",
+    "type": "library",
+    "keywords": ["laravel", "enumeration"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jundayw",
+            "email": "jundayw@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jundayw\\LaravelEnumeration\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jundayw\\LaravelEnumeration\\EnumerationServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
