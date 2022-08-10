@@ -27,9 +27,9 @@ php artisan make:enumeration Test
 ```php
 namespace App\Enums;
 
-use App\Annotation\Attributes;
-use App\Concerns\HasEnumeration;
-use App\Contracts\Enumeration;
+use Jundayw\LaravelEnumeration\Annotation\Attributes;
+use Jundayw\LaravelEnumeration\Concerns\HasEnumeration;
+use Jundayw\LaravelEnumeration\Contracts\Enumeration;
 
 enum Test: string implements Enumeration
 {
@@ -102,32 +102,58 @@ dd($manager->state);
 
 ```php
 use App\Enums\Test;
+use Jundayw\LaravelEnumeration\Annotation\Attributes;
 
 dd([
+    // Test[]
     Test::cases(),
+    // string
     Test::NAME->name,
+    // string
     Test::NAME->getName(),
+    // string
     Test::NAME->value,
+    // string
     Test::NAME->getValue(),
+    // mixed
     Test::NAME->getAttribute(),
+    // array
     Test::NAME->toArray(),
+    // string
     Test::NAME->toJson(),
+    // Attributes[]
     Test::values(),
+    // string
     Test::valueOf('NAME', Test::NAME)->name,
+    // string
     Test::valueOf('NAME', Test::NAME)->getName(),
+    // string
     Test::valueOf('NAME', Test::NAME)->value,
+    // string
     Test::valueOf('NAME', Test::NAME)->getValue(),
+    // mixed
     Test::valueOf('NAME', Test::NAME)->getAttribute(),
+    // string
     Test::valueOf('value')->name,
+    // string
     Test::valueOf('value')->getName(),
+    // string
     Test::valueOf('value')->value,
+    // string
     Test::valueOf('value')->getValue(),
+    // mixed
     Test::valueOf('value')->getAttribute(),
+    // Test
     Test::valueOf('value')->getDeclaringClass(),
+    // string
     Test::valueOf('value')->getDeclaringClass()->name,
+    // string
     Test::valueOf('value')->getDeclaringClass()->getName(),
+    // string
     Test::valueOf('value')->getDeclaringClass()->value,
+    // string
     Test::valueOf('value')->getDeclaringClass()->getValue(),
+    // mixed
     Test::valueOf('value')->getDeclaringClass()->getAttribute(),
 ]);
 ```
