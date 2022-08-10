@@ -101,7 +101,7 @@ dd($manager->state);
 ## 枚举方法集合
 
 ```php
-use App\Enums\TestEnum;
+use App\Enums\Test;
 
 dd([
     Test::cases(),
